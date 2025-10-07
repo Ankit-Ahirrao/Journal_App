@@ -21,4 +21,9 @@ public class JournalEntryController {
         journalEntries.put(entry.getId(), entry);
         return true;
     }
+
+    @GetMapping("id/{myId}")
+    public JournalEntry getJournalEntryById(@PathVariable Long myId){
+        return journalEntries.get(myId);
+    }
 }
